@@ -31,33 +31,28 @@ body {
 /* My solution */
 /* How do I get the content div to stretch vertically? */
 
-.body,
-.content,
-.card-container {
+body {
   display: flex;
-}
-
-.body {
   flex-direction: column;
 }
 
-/* .content {
-  justify-content: stretch;
-} */
-
-.header,
-.footer {
+.header {
   display: flex;
   width: 100%;
-}
-
-.header {
   font-size: 32px;
   font-weight: 900;
   vertical-align: middle;
 }
 
+.content {
+  /*Important to set flex: 1 so that content expands to fill screen*/
+  flex: 1;
+  display: flex;
+}
+
 .footer {
+  display: flex;
+  width: 100%;
   justify-content: center;
 }
 
@@ -72,17 +67,15 @@ body {
 }
 
 .card-container {
+  display: flex;
   width: 100%;
   padding: 32px;
   flex-wrap: wrap;
-  flex-direction: row;
   gap: 15px;
 }
 
 .card {
-  flex: 1 1 auto;
-  width: 200px;
-  height: 200px;
+  width: 250px;
   padding: 20px;
 }
 
@@ -95,6 +88,7 @@ a {
 li {
   list-style: none;
   justify-content: flex-start;
+  margin-bottom: 10px;
 }
 
 ul {
