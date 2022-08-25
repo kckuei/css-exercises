@@ -23,6 +23,82 @@ body {
 
 .card {
   border: 1px solid #eee;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, .06);
   border-radius: 4px;
+}
+
+
+/* My solution */
+/* How do I get the content div to stretch vertically? */
+
+.body,
+.content,
+.card-container {
+  display: flex;
+}
+
+.body {
+  flex-direction: column;
+}
+
+.content {
+  justify-content: stretch;
+}
+
+.header,
+.footer {
+  display: flex;
+  width: 100%;
+}
+
+.header {
+  font-size: 32px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.footer {
+  justify-content: center;
+}
+
+.title-text {
+  align-self: center;
+}
+
+.sidebar {
+  padding: 16px;
+  /*Important to set flex-grow and flex-shrink to 0 because we don't want sidebar to change*/
+  flex: 0 0 auto;
+}
+
+.card-container {
+  padding: 32px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.card {
+  flex: 1 1 auto;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+li {
+  list-style: none;
+  justify-content: flex-start;
+}
+
+
+
+
+* {
+  border: 2px solid red;
 }
